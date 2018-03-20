@@ -1,0 +1,1 @@
+详细操作步骤见我的博客：http://www.sunsiquan.top/wordpress/net/webservice%E4%BD%BF%E7%94%A8entityframework%E6%9F%A5%E8%AF%A2oracle.html
