@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateCodeImgDemo", "ValidateCodeImgDemo\ValidateCodeImgDemo.csproj", "{C32E777C-3B96-4DC0-986A-561CA6B13F26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateCodeImgDemo.Tests", "ValidateCodeImgDemo.Tests\ValidateCodeImgDemo.Tests.csproj", "{6FD9B76D-1347-4BC6-B34C-29D9A7CBA4D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C32E777C-3B96-4DC0-986A-561CA6B13F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32E777C-3B96-4DC0-986A-561CA6B13F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32E777C-3B96-4DC0-986A-561CA6B13F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32E777C-3B96-4DC0-986A-561CA6B13F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD9B76D-1347-4BC6-B34C-29D9A7CBA4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD9B76D-1347-4BC6-B34C-29D9A7CBA4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD9B76D-1347-4BC6-B34C-29D9A7CBA4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD9B76D-1347-4BC6-B34C-29D9A7CBA4D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

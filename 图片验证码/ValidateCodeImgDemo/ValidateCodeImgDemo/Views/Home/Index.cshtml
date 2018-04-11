@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello Index</title>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <img id="validate-code-img" src="~/Home/GetValidateCodeImg">
+        <br />
+        <input id="validate-code" type="text"/>
+        <button id="submit">submit</button>
+    </div>
+    <script>
+        $(function () {
+
+            $('#validate-code-img').on('click', function () {
+                var date = new Date();
+                var datetime = date.getTime();
+                $(this).attr('src', '/Home/GetValidateCodeImg?v=' + datetime)
+            });
+
+            $('#submit').on('click', function () {
+                var validateCode = $('#validate-code').val();
+                $.ajax({
+                    type: 'GET',
+                    url: '/Home/ValidateCodeFromClient',
+                    data: {
+                        validateCode: validateCode
+                    },
+                    success: function (data) {
+                        alert(data.info);
+                    },
+                    error: function () {
+                        alert('ajax error');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
