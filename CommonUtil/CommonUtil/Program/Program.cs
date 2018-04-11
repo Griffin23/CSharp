@@ -13,8 +13,7 @@ namespace Program
         static void Main(string[] args)
         {
             // Test
-            Log4netHelper.Error("error test");
-            Log4netHelper.Info("info test");
+            Console.Write(RandomCodeGenerator.GetRandomCode(5));
         }
     }
 }
