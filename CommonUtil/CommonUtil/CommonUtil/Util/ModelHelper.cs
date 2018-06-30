@@ -21,7 +21,11 @@ namespace CommonUtil.Util
             System.Reflection.PropertyInfo[] PropertyList = t.GetProperties();
             foreach (System.Reflection.PropertyInfo item in PropertyList)
             {
-                result.Add(item.Name, item.GetValue(model, null).ToString());
+                var value = item.GetValue(model, null);
+                if (value != null)
+                {
+                    result.Add(item.Name, value.ToString());
+                }
             }
             return result;
         }
