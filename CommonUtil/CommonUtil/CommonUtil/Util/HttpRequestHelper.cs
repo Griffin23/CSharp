@@ -25,10 +25,11 @@ namespace CommonUtil.Util
             }
         }
 
-        public static string GetFormDataPostResponseStr(string url, Dictionary<string, string> reqParamsDict)
+        public static string GetFormDataPostResponseStr(string url, object reqParamsObj)
         {
             RestClient restClient = new RestClient();
             var restRequest = new RestRequest(url, Method.POST);
+            Dictionary<string, string> reqParamsDict = ModelHelper.GetDictionaryFromModel<object>(reqParamsObj);
             foreach (var param in reqParamsDict)
             {
                 restRequest.AddParameter(param.Key, param.Value);
@@ -40,21 +41,21 @@ namespace CommonUtil.Util
             }
             catch (Exception e)
             {
-                Log4netHelper.Error("GetFormDataPostResponseStr异常：url=" + url + ", reqParamsDict=" + reqParamsDict.ToString()
-                    + "\r\nException：" + e.ToString());
                 throw e;
             }
         }
 
-        public static string GetJsonPostResponseStr(string url, Dictionary<string, string> headersDict, string reqJsonStr)
+        public static string GetJsonPostResponseStr(string url, object headerObj, object reqParams)
         {
             RestClient restClient = new RestClient(url);
             var restRequest = new RestRequest();
             restRequest.Method = Method.POST;
+            Dictionary<string, string> headersDict = ModelHelper.GetDictionaryFromModel<object>(headerObj);
             foreach (var header in headersDict)
             {
                 restRequest.AddHeader(header.Key, header.Value);
             }
+            string reqJsonStr = JsonHelper.GetJsonFromObject(reqParams);
             restRequest.AddParameter("application/json", reqJsonStr, ParameterType.RequestBody);
             try
             {
@@ -63,8 +64,6 @@ namespace CommonUtil.Util
             }
             catch (Exception e)
             {
-                Log4netHelper.Error("GetJsonPostRespnseStr异常：url=" + url + "headersDict=" + headersDict.ToString() 
-                    + ", reqJsonStr=" + reqJsonStr + "\r\nException：" + e.ToString());
                 throw e;
             }
         }

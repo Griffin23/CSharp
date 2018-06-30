@@ -14,10 +14,8 @@ namespace Program
         {
             string url = "xxxx";
             MyHttpRequestHeader header = new MyHttpRequestHeader();
-            Dictionary<string, string> headerDict = ModelHelper.GetDictionaryFromModel<MyHttpRequestHeader>(header);
             MyHttpRequestBody body = new MyHttpRequestBody();
-            string reqJsonStr = JsonHelper.GetJsonFromObject(body);
-            return HttpRequestHelper.GetJsonPostResponseStr(url, headerDict, reqJsonStr);
+            return HttpRequestHelper.GetJsonPostResponseStr(url, header, body);
         }
     }
 }
