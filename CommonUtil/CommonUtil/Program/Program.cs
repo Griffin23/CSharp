@@ -13,7 +13,7 @@ namespace Program
         static void Main(string[] args)
         {
             // Test
-            Console.Write(RandomCodeGenerator.GetRandomCode(5));
+            Console.Write(HttpRequestDemo.GetJsonPostResponseStr());
         }
     }
 }
