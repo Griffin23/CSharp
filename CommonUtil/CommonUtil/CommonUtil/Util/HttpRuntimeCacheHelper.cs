@@ -11,14 +11,14 @@ namespace CommonUtil.Util
     {
         public static void SetAbsoluteExpirationCache(string key, object value, double milliSeconds)
         {
-            HttpRuntime.Cache.Add(key, value, null, DateTime.UtcNow.AddMilliseconds(milliSeconds),
+            HttpRuntime.Cache.Insert(key, value, null, DateTime.UtcNow.AddMilliseconds(milliSeconds),
                 System.Web.Caching.Cache.NoSlidingExpiration,
                 System.Web.Caching.CacheItemPriority.Normal, null);
         }
 
         public static void SetSlidingExpirationCache(string key, object value, double milliSeconds)
         {
-            HttpRuntime.Cache.Add(key, value, null, System.Web.Caching.Cache.NoAbsoluteExpiration,
+            HttpRuntime.Cache.Insert(key, value, null, System.Web.Caching.Cache.NoAbsoluteExpiration,
                 TimeSpan.FromMilliseconds(milliSeconds),
                 System.Web.Caching.CacheItemPriority.Normal, null);
         }
