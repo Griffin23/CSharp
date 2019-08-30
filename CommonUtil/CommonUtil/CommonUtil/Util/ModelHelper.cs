@@ -17,14 +17,17 @@ namespace CommonUtil.Util
         public static Dictionary<string, string> GetDictionaryFromModel<T>(T model)
         {
             Dictionary<string, string> result = new Dictionary<string, string>();
-            Type t = model.GetType();
-            System.Reflection.PropertyInfo[] PropertyList = t.GetProperties();
-            foreach (System.Reflection.PropertyInfo item in PropertyList)
+            if (model != null)
             {
-                var value = item.GetValue(model, null);
-                if (value != null)
+                Type t = model.GetType();
+                System.Reflection.PropertyInfo[] PropertyList = t.GetProperties();
+                foreach (System.Reflection.PropertyInfo item in PropertyList)
                 {
-                    result.Add(item.Name, value.ToString());
+                    var value = item.GetValue(model, null);
+                    if (value != null)
+                    {
+                        result.Add(item.Name, value.ToString());
+                    }
                 }
             }
             return result;

@@ -15,7 +15,7 @@ namespace Program
             string url = "xxxx";
             MyHttpRequestHeader header = new MyHttpRequestHeader();
             MyHttpRequestBody body = new MyHttpRequestBody();
-            return HttpRequestHelper.GetJsonPostResponseStr(url, header, body);
+            return HttpUtil.GetGetResponseStr(url, body, header);
         }
     }
 }

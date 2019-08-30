@@ -53,8 +53,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\CommonUtil.cs" />
-    <Compile Include="Util\HttpRequestHelper.cs" />
     <Compile Include="Util\HttpRuntimeCacheHelper.cs" />
+    <Compile Include="Util\HttpUtil.cs" />
     <Compile Include="Util\JsonHelper.cs" />
     <Compile Include="Util\Log4netHelper.cs" />
     <Compile Include="Util\ModelHelper.cs" />
