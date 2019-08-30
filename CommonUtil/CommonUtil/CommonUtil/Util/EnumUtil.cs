@@ -6,9 +6,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyPro.Utils.Enum
+namespace CommonUtil.Util
 {
-    public static class EnumExtension
+    public static class EnumUtil
     {
         public static string ToDescription<T>(this T myEnum)
         {
