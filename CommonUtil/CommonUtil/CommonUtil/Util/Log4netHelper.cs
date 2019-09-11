@@ -12,14 +12,13 @@ namespace CommonUtil.Util
 {
     public class Log4netHelper
     {
+        private static ILog logger = log4net.LogManager.GetLogger("myLogger");
         public static void Info(string msg)
         {
-            ILog logger = log4net.LogManager.GetLogger("InfoLog");
             logger.Info(msg);
         }
         public static void Error(string msg)
         {
-            ILog logger = log4net.LogManager.GetLogger("ErrorLog");
             logger.Error(msg);
         }
         public static void RecordException(Exception e)

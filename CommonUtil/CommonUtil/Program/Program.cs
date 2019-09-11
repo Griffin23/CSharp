@@ -13,7 +13,8 @@ namespace Program
         static void Main(string[] args)
         {
             // Test
-            Console.Write(HttpRequestDemo.GetJsonPostResponseStr());
+            Log4netHelper.Info("test info log ... ");
+            Log4netHelper.Info("test error log ... ");
         }
     }
 }
